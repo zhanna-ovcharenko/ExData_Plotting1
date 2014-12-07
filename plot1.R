@@ -15,10 +15,12 @@ energy <- read.table(file = "household_power_consumption.txt", header = TRUE, se
 ##
 ##Create a plot
 ##
+par(bg = NA)
+
 hist(as.numeric(as.character(energy$Global_active_power)), col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 
 ##
 ##Save to PNG file
 ##
-dev.copy(png, file = "plot1.png")
+dev.copy(png, file = "plot1.png", bg = "transparent")
 dev.off()

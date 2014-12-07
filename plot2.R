@@ -15,6 +15,8 @@ energy <- read.table(file = "household_power_consumption.txt", header = TRUE, se
 ##
 ##Create a plot
 ##
+par(bg = NA)
+
 with(energy, plot(DateTime, as.numeric(as.character(Global_active_power)), xlab = "", ylab = "Global Active Power (kilowatts)", type = "l"))
 
 
